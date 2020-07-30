@@ -1,12 +1,9 @@
-# Signal denoising practice with python
+# Signals and Systems Related Projects
 
-First I have read denoised wav file. 
+There are several projects in this repository which are related to signal and image processing and systems.
 
-Then I have implemented funcitons for moving average filter, median filter,
-convolution and mse calculation. These functions are written by hand libraries are not used.
+Hot topics are filters, fast fourier transform, convolution, the spectrogram, image filtering etc.
 
-I applied some operations and filters on noisy signal.
+All projects are coded using Python in Jupyter Notebook.
 
-When I applied moving average filter, I got 29536.65 MSE however I got 28530.7 MSE when Iapplied median filter on noisy signal.
 
-I create denoised wav file at the end.
