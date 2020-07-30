@@ -5,13 +5,13 @@ In this part, DFT is used for audio visualization. Steps are given below for a b
 * Select the visualization renewal rate (e.g. 10 FPS). Since you know the sample rate in Hertz (44100 in the given file.), you can select data from the audio array which is matching with renewal time. For example, to visualize at 10 FPS, each visualization interval comes from 4410 values in sampled audio matrix. Pad the audio matrix with zeroes if necessary.
 
 * For each visualization interval;
- - Find FFT of that interval using built-in functions. Since it’s in exponential form, it will give an array of complex numbers. Find the magnitude of each
+  - Find FFT of that interval using built-in functions. Since it’s in exponential form, it will give an array of complex numbers. Find the magnitude of each
 value.
- - The transformed values have a great range because of the outliers. For a better representation, logarithm operation 10 ∗ log10(x f t + c) is used for each value. Here c can be a small number to avoid log10(0).
- - Since the obtained transformation is mirrored (see conjugate symmetry prop-
+  - The transformed values have a great range because of the outliers. For a better representation, logarithm operation 10 ∗ log10(x f t + c) is used for each value. Here c can be a small number to avoid log10(0).
+  - Since the obtained transformation is mirrored (see conjugate symmetry prop-
 erty) you may use:
-  * The first half of the array
-  * Shifted version of the array using fftshift function
+    * The first half of the array
+    * Shifted version of the array using fftshift function
 * After obtaining transforms for all visualization intervals, you can plot the transforms using matplotlib’s “bar” function and write the results to a video file.
 
 * To write the audio on the video, you can benefit from moviepy library.
