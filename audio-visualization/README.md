@@ -7,9 +7,8 @@ In this part, DFT is used for audio visualization. Steps are given below for a b
 * For each visualization interval;
   - Find FFT of that interval using built-in functions. Since it’s in exponential form, it will give an array of complex numbers. Find the magnitude of each
 value.
-  - The transformed values have a great range because of the outliers. For a better representation, logarithm operation 10 ∗ log10(x f t + c) is used for each value. Here c can be a small number to avoid log10(0).
-  - Since the obtained transformation is mirrored (see conjugate symmetry prop-
-erty) you may use:
+  - The transformed values have a great range because of the outliers. For a better representation, logarithm operation 10 ∗ log10(xft + c) is used for each value. Here c can be a small number to avoid log10(0).
+  - Since the obtained transformation is mirrored (see conjugate symmetry property) you may use:
     * The first half of the array
     * Shifted version of the array using fftshift function
 * After obtaining transforms for all visualization intervals, you can plot the transforms using matplotlib’s “bar” function and write the results to a video file.
